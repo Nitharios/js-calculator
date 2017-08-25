@@ -11,7 +11,14 @@
 
     return calculator = {
       load: setTotal,
-      getTotal: getTotal
+      getTotal: getTotal,
+      add: add,
+      subtract: subtract,
+      multiply: multiply,
+      divide: divide,
+      recallMemory: recallMemory,
+      saveMemory: saveMemory,
+      clearMemory: clearMemory
     }
 
 
@@ -70,14 +77,14 @@
    * Return the value stored at `memory`
    * @return { Number }
    */
-    function returnMemory() {
+    function recallMemory() {
       return memory
     }
 
   /**
    * Stores the value of `total` to `memory`
    */
-    function toMemory() {
+    function saveMemory() {
       memory = total
     }
 
@@ -85,7 +92,7 @@
    * Clear the value stored at `memory`
    */
     function clearMemory() {
-      var memory
+      memory = 0
     }
 
   /**
