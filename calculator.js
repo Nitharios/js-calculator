@@ -7,10 +7,11 @@
  */
  var calculatorModule = (function() {
 
-    var memory, total;
+    var memory = 0, total = 0;
 
     return calculator = {
-      load: setTotal
+      load: setTotal,
+      getTotal: getTotal
     }
 
 
@@ -28,7 +29,7 @@
    * Return the value of `total`
    * @return { Number }
    */
-    function returnTotal() {
+    function getTotal() {
       return total
    }
 
