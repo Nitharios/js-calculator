@@ -28,8 +28,12 @@
    * @return { Number }    current total
    */
     function setTotal(x) {
-      total = x
-      return total
+      if (typeof x === 'number') {
+        total = x
+        return total
+      } else {
+        throw new Error('Invalid')
+      }
    }
 
   /**
@@ -46,7 +50,11 @@
    * @param { Number } x
    */
     function add(x) {
-      total += x
+      if (typeof x === 'number') {
+        total += x
+      } else {
+        throw new Error('Invalid')
+      }
     }
 
   /**
@@ -54,7 +62,11 @@
    * @param  { Number } x
    */
     function subtract(x) {
-      total -= x
+      if (typeof x === 'number') { 
+        total -= x
+      } else {
+        throw new Error('Invalid')
+      }
     }
 
   /**
@@ -62,15 +74,23 @@
    * @param  { Number } x
    */
     function multiply(x) {
-      total *= x
-    }
+      if (typeof x === 'number') {
+        total *= x
+      } else {
+        throw new Error('Invalid')
+      }
+    } 
 
   /**
    * Divides the value passing in by `total`
    * @param  { Number } x
    */
     function divide(x) {
-      total /= x
+      if (typeof x === 'number') {
+        total /= x
+      } else {
+        throw new Error('Invalid')
+      }
     }
 
   /**
