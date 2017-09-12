@@ -12,6 +12,7 @@
     return calculator = {
       load: setTotal,
       getTotal: getTotal,
+      resetTotal: resetTotal,
       add: add,
       subtract: subtract,
       multiply: multiply,
@@ -39,6 +40,10 @@
    */
     function getTotal() {
       return total
+   }
+
+   function resetTotal() {
+      total = 0;
    }
 
 
